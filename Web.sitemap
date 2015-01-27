@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="" title=""  description="">
+
+    <siteMapNode url="~/HomePage.aspx" title="Home"  description="Home Page" />
+
+    <siteMapNode url ="" title ="Master" description ="Master List">
+      <siteMapNode url="~/Masters/CityMast.aspx" title ="City Master" description ="City Master"></siteMapNode>
+      <siteMapNode url="~/Masters/StateMast.aspx" title ="State Master" description ="State Master"></siteMapNode>
+      <siteMapNode url="~/Masters/CountryMast.aspx" title ="Country Master" description ="Country Master"></siteMapNode>
+      <siteMapNode url="~/Masters/DepartmentMast.aspx" title ="Department Master" description ="Department Master"></siteMapNode>
+      <siteMapNode url="~/Masters/Designation.aspx" title ="Designation Master" description ="Designation Master"></siteMapNode>
+      <siteMapNode url="~/Masters/EmployeeMast.aspx" title ="Employee Master" description ="Employee Master"></siteMapNode>
+      <siteMapNode url="~/Masters/ClientMast.aspx" title ="Client Master" description ="Client Master"></siteMapNode>
+      <siteMapNode url="~/Masters/ProjectMast.aspx" title ="Project Master" description ="Project Master"></siteMapNode>      
+    </siteMapNode>
+
+    <siteMapNode url="" title ="Transaction" description ="Transaction">
+      <siteMapNode url="" title ="Daily Entry" description ="Daily Entry">
+        <siteMapNode url="~/Transaction/DailyAttandance.aspx" title ="Attendace Entry" description ="Attendance Entry"></siteMapNode>
+        <siteMapNode url="~/Transaction/DRFEntry.aspx" title ="DRF (Daily Report Form)" description ="DRF (Daily Report Form)"></siteMapNode>        
+      </siteMapNode>      
+      <siteMapNode url="~/Transaction/WrokAssign.aspx" title ="Work Assign Entry" description ="Work Assign Entry"></siteMapNode>
+      <siteMapNode url="~/Transaction/LeaveEntry.aspx" title ="Leave Details Entry" description ="Leave Details Entry"></siteMapNode>
+      <siteMapNode url="~/Transaction/MthAttSalGen.aspx" title ="Generate Monthly Attandance And Salary" description ="Generate Monthly Attandance And Salary"></siteMapNode>                      
+    </siteMapNode>
+
+    <siteMapNode url="" title ="Report" description ="Report">      
+      <siteMapNode url="~/Report/EmpInfo.aspx" title ="Employee List" description ="Employee List"></siteMapNode>
+      <siteMapNode url="~/Report/ClientInfo.aspx" title ="Client List" description ="Client List"></siteMapNode>
+      <siteMapNode url="~/Report/ProjectList.aspx" title ="Project List" description ="Project List"></siteMapNode>
+      <siteMapNode url="~/Report/AttendanceInfo.aspx" title ="Attendance List" description ="Attendance List"></siteMapNode>      
+      <siteMapNode url="~/Report/AssWrkInfo.aspx" title ="Assign Work Reports" description ="Assign Work Report"></siteMapNode>
+      <siteMapNode url="~/Report/DRFInfo.aspx" title ="Daily Work Reports" description ="Daily Work Report"></siteMapNode>  
+      <siteMapNode url="~/Report/MthSalaryInfo.aspx" title ="Monthly Salary Report" description ="Monthly Salary Report"></siteMapNode>        
+      <siteMapNode url="~/Report/LeaveInfo.aspx" title ="Leave Information" description ="Leave Information"></siteMapNode>        
+    </siteMapNode>
+
+    <siteMapNode url ="" title ="Utilities" description ="Utilities">
+      <siteMapNode url="~/Utilities/ComapnyMast.aspx" title ="Company Master" description ="Company Master"></siteMapNode>
+      <siteMapNode url="~/Utilities/UserGroup.aspx" title ="User Group" description ="User Group"></siteMapNode>
+      <siteMapNode url="~/Utilities/UserMast.aspx" title ="User Master" description ="User Master"></siteMapNode>
+    </siteMapNode>
+
+    <siteMapNode url="~/Aboutus.aspx" title ="About us" description ="About us"></siteMapNode>
+    <siteMapNode url="~/Contactus.aspx" title ="Contact us" description ="Contact us"></siteMapNode>
+
+    <!--<siteMapNode url="Aboutus.aspx" title="Aboutus"  description="About Us" />
+    <siteMapNode url="Contactus.aspx" title="Contactus"  description="Contact Us" />
+    <siteMapNode url="Login.aspx" title="Login"  description="Login" />-->
+    <!--<siteMapNode url="Default.aspx" title="Logout"  description="Logout" />
+    <siteMapNode url="" title="Master"  description="Master">      
+      <siteMapNode url="Masters/CityMast.aspx" title="City Master"  description="City Master" />
+      <siteMapNode url="Masters/StateMast.aspx" title="State Master"  description="State Master" />
+      <siteMapNode url="Masters/CountryMast.aspx" title="Country Master"  description="Country Master" />
+      <siteMapNode url="Masters/DepartmentMast.aspx" title="Department Master"  description="Department Master"/>      
+      <siteMapNode url="Masters/Designation.aspx" title="Designation Master"  description="Designation Master" />      
+    </siteMapNode>
+    <siteMapNode url="" title="Utilities"  description="Utilities">
+      <siteMapNode url="Utilities/ComapnyMast.aspx" title="Company Master"  description="Company Master" />
+      <siteMapNode url="Utilities/UserGroup.aspx" title="User Group"  description="User Group" />
+      <siteMapNode url="Utilities/UserMast.aspx" title="User Master"  description="User Master" />
+    </siteMapNode>-->
+  </siteMapNode>
+</siteMap>
+

@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterDefault.master.cs" Inherits="MasterDefault" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <%--For DropDown List--%>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link href="css/DropDownList.css" rel="stylesheet" />
+
+    <title>User Login Form</title>
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+
+    <!--webfonts-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:600italic,400,300,600,700' rel='stylesheet' type='text/css' />
+    <!--//webfonts-->
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderhead" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <script type="text/javascript">
+        function Validation()
+        {
+            var str;                       
+            //str = document.getElementById("DdlUserGrp");
+            str = document.getElementById("<%=DdlUserGrp.ClientID %>").value;
+            if (str == "0")
+            {
+                alert("Select User Group !!!");                
+                return(false);
+            }
+            else
+            {
+                str = document.getElementById("<%=TxtUserId.ClientID %>").value;
+                if (str == ""||str=="USERNAME")
+                {
+                    alert("Enter Valid User Name !!!")
+                    return (false);
+                }
+                else
+                {
+                    str = document.getElementById("<%=TxtPassword.ClientID %>").value;
+                    if (str == "") {
+                        alert("Enter Valid Password");
+                        return (false);
+                    }
+                    else
+                    {
+                        return (true);
+                    }                    
+                }                
+            }            
+        }
+
+    </script> 
+</head>
+<body>
+    <!-----start-main---->
+    <div class="login-form">
+        <div class="head">
+            <img src="images/mem2.jpg" alt="" />
+
+        </div>
+        <form id="FrmMastDefault" runat="server">
+            <div>
+                <%--<input type="" class="text" value="USERGROUP" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}" id="Text1" runat="server" />--%>
+
+                <%--USER GROUP<i></i>                   
+                    <asp:DropDownList ID="DDLUserGroup" Height="20px"  Width="150px" runat="server" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERGROUP';}" ></asp:DropDownList>--%>
+
+                <%--<a href="#" class=" icon user"></a>--%>
+                <%-- USER GROUP
+                    <select id="DDLUserGroup" runat ="server" style="width:150px;">
+                        <option></option>
+                        <option>Admin</option>
+                        <option>User</option>
+                        <option>Report</option>
+                        <option>Employee</option>
+                    </select>--%>
+                <%--<li style="height: 50px; text-align: center;">                  
+                </li>--%>
+                <li>
+                    <section id="selusergrp" runat="server" class="container">
+                        <div class="dropdown">
+                            <select id="DdlUserGrp" runat="server" name="DdlUserGrp" class="dropdown-select">
+                               <%--<option value="0">Select User Group</option>
+                                <option value="1">Option #1</option>--%>
+                            </select>
+                        </div>
+                    </section>
+                </li>
+                <li>
+                    <input type="text" class="text" value="USERNAME" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'USERNAME';}" id="TxtUserId" runat="server" />
+                    <a href="#" class=" icon user"></a>
+                </li>
+                <li>
+                    <input id="TxtPassword" runat="server" type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" /><a href="#" class=" icon lock"></a>
+                </li>
+            </div>
+
+            <div class="clear"></div>
+            <div class="p-container">
+                <label class="checkbox" runat="server">
+                    <input id="ChkRememberMe" type="checkbox" name="checkbox" checked="" runat="server" />
+                    <i></i>Remember Me                   
+                </label>
+                <br />
+                <%--<input type="submit" onclick="myFunction()" value="SIGN IN" />--%>
+                <asp:Button ID="BtnSubmit" runat="server" Text="SIGN IN" OnClientClick="return Validation()" OnClick="BtnSubmit_Click" /><br />
+                <br />
+                <div class="clear"></div>
+                <asp:Label ID="LblMsg" runat="server" Text="" ForeColor="Red"></asp:Label><br />
+                <br />
+                <asp:Label ID="LblNote" runat="server" ForeColor="Blue" Text="If you don't have an user account then contact your administrator."></asp:Label>
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolderPage" runat="server">
+            </asp:ContentPlaceHolder>
+        </form>
+    </div>
+    <!--//End-login-form-->
+    <!-----start-copyright---->
+    <div class="copy-right">
+        <p>&copy; Copyright This WebSite. Designed by <a href="#">I.I.T.S.</a></p>
+    </div>
+    <!-----//end-copyright---->
+</body>
+</html>

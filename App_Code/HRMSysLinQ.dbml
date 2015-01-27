@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="HRMSYSWEB" Class="HRMSysLinQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=JARVIS-PC\SQLEXPRESS;Initial Catalog=HRMSYSWEB;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="HRMSYSWEBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Leave_Application" Member="Leave_Applications">
+    <Type Name="Leave_Application">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Application_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ToDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TotalDays" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LeaveStatus" Type="System.String" DbType="VarChar(5)" CanBeNull="true" />
+      <Column Name="LeaveType" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Reason" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Entry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UPDFLAG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MEntry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Emp_Mast_Leave_Application" Member="Emp_Mast" ThisKey="EmpId" OtherKey="Id" Type="Emp_Mast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Emp_Mast" Member="Emp_Masts">
+    <Type Name="Emp_Mast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EmpName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DeptId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesigId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EmpGroup" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BasicRate" Type="System.Decimal" DbType="Decimal(19,4) NOT NULL" CanBeNull="false" />
+      <Column Name="DOJ" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="DOB" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Gender" Type="System.Char" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="EMailId" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="PinCode" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="MobNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BloodGroup" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="LeftDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UPDFLAG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MEntry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="FJobTime" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="TJobTime" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(8000) NOT NULL" CanBeNull="false" />
+      <Column Name="TotTime" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Association Name="Emp_Mast_Leave_Application" Member="Leave_Applications" ThisKey="Id" OtherKey="EmpId" Type="Leave_Application" />
+      <Association Name="Dept_Mast_Emp_Mast" Member="Dept_Mast" ThisKey="DeptId" OtherKey="Id" Type="Dept_Mast" IsForeignKey="true" />
+      <Association Name="Desig_Mast_Emp_Mast" Member="Desig_Mast" ThisKey="DesigId" OtherKey="Id" Type="Desig_Mast" IsForeignKey="true" />
+      <Association Name="Country_Mast_Emp_Mast" Member="Country_Mast" ThisKey="CountryId" OtherKey="Id" Type="Country_Mast" IsForeignKey="true" />
+      <Association Name="State_Mast_Emp_Mast" Member="State_Mast" ThisKey="StateId" OtherKey="Id" Type="State_Mast" IsForeignKey="true" />
+      <Association Name="City_Mast_Emp_Mast" Member="City_Mast" ThisKey="CityId" OtherKey="Id" Type="City_Mast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Project_Mast" Member="Project_Masts">
+    <Type Name="Project_Mast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ProjectName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProjctStatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Entry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UPDFLAG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MEntry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Project_Mast_Project_Module" Member="Project_Modules" ThisKey="Id" OtherKey="ProjectId" Type="Project_Module" />
+      <Association Name="Client_Mast_Project_Mast" Member="Client_Mast" ThisKey="ClientId" OtherKey="Id" Type="Client_Mast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Project_Module" Member="Project_Modules">
+    <Type Name="Project_Module">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ProjectId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ModuleName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ModuleStatus" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Remark" Type="System.String" DbType="VarChar(8000)" CanBeNull="true" />
+      <Column Name="Entry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UPDFLAG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MEntry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Project_Mast_Project_Module" Member="Project_Mast" ThisKey="ProjectId" OtherKey="Id" Type="Project_Mast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Client_Mast" Member="Client_Masts">
+    <Type Name="Client_Mast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ClientName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="FirmName" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="DOJ" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="EMailId" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CityId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Address1" Type="System.String" DbType="VarChar(1000)" CanBeNull="true" />
+      <Column Name="PinCode" Type="System.String" DbType="VarChar(25)" CanBeNull="true" />
+      <Column Name="MobNo" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="LeftDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UPDFLAG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MEntry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Client_Mast_Project_Mast" Member="Project_Masts" ThisKey="Id" OtherKey="ClientId" Type="Project_Mast" />
+      <Association Name="Country_Mast_Client_Mast" Member="Country_Mast" ThisKey="CountryId" OtherKey="Id" Type="Country_Mast" IsForeignKey="true" />
+      <Association Name="State_Mast_Client_Mast" Member="State_Mast" ThisKey="StateId" OtherKey="Id" Type="State_Mast" IsForeignKey="true" />
+      <Association Name="City_Mast_Client_Mast" Member="City_Mast" ThisKey="CityId" OtherKey="Id" Type="City_Mast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Dept_Mast" Member="Dept_Masts">
+    <Type Name="Dept_Mast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DeptName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Entry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UPDFLAG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MEntry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Dept_Mast_Emp_Mast" Member="Emp_Masts" ThisKey="Id" OtherKey="DeptId" Type="Emp_Mast" />
+      <Association Name="Dept_Mast_Desig_Mast" Member="Desig_Masts" ThisKey="Id" OtherKey="Dept_Id" Type="Desig_Mast" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Desig_Mast" Member="Desig_Masts">
+    <Type Name="Desig_Mast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="DesigName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Dept_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Entry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UPDFLAG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MEntry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Desig_Mast_Emp_Mast" Member="Emp_Masts" ThisKey="Id" OtherKey="DesigId" Type="Emp_Mast" />
+      <Association Name="Dept_Mast_Desig_Mast" Member="Dept_Mast" ThisKey="Dept_Id" OtherKey="Id" Type="Dept_Mast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Country_Mast" Member="Country_Masts">
+    <Type Name="Country_Mast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CountryName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Entry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UPDFLAG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MEntry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="Country_Mast_Emp_Mast" Member="Emp_Masts" ThisKey="Id" OtherKey="CountryId" Type="Emp_Mast" />
+      <Association Name="Country_Mast_Client_Mast" Member="Client_Masts" ThisKey="Id" OtherKey="CountryId" Type="Client_Mast" />
+      <Association Name="Country_Mast_State_Mast" Member="State_Masts" ThisKey="Id" OtherKey="CountryId" Type="State_Mast" />
+      <Association Name="Country_Mast_City_Mast" Member="City_Masts" ThisKey="Id" OtherKey="CountryId" Type="City_Mast" />
+    </Type>
+  </Table>
+  <Table Name="dbo.State_Mast" Member="State_Masts">
+    <Type Name="State_Mast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StateName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Entry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UPDFLAG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MEntry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="State_Mast_Emp_Mast" Member="Emp_Masts" ThisKey="Id" OtherKey="StateId" Type="Emp_Mast" />
+      <Association Name="State_Mast_Client_Mast" Member="Client_Masts" ThisKey="Id" OtherKey="StateId" Type="Client_Mast" />
+      <Association Name="State_Mast_City_Mast" Member="City_Masts" ThisKey="Id" OtherKey="StateId" Type="City_Mast" />
+      <Association Name="Country_Mast_State_Mast" Member="Country_Mast" ThisKey="CountryId" OtherKey="Id" Type="Country_Mast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.City_Mast" Member="City_Masts">
+    <Type Name="City_Mast">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CityName" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="StateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CountryId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Entry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Entry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UPDFLAG" Type="System.Byte" DbType="TinyInt" CanBeNull="true" />
+      <Column Name="MEntry_Date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_Time" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="MEntry_UID" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="City_Mast_Emp_Mast" Member="Emp_Masts" ThisKey="Id" OtherKey="CityId" Type="Emp_Mast" />
+      <Association Name="City_Mast_Client_Mast" Member="Client_Masts" ThisKey="Id" OtherKey="CityId" Type="Client_Mast" />
+      <Association Name="Country_Mast_City_Mast" Member="Country_Mast" ThisKey="CountryId" OtherKey="Id" Type="Country_Mast" IsForeignKey="true" />
+      <Association Name="State_Mast_City_Mast" Member="State_Mast" ThisKey="StateId" OtherKey="Id" Type="State_Mast" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Student" Member="Students">
+    <Type Name="Student">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Age" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

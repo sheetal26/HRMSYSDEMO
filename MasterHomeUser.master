@@ -1,0 +1,165 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterHomeUser.master.cs" Inherits="MasterHome" %>
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>HRM System</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link href="style.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="js/cufon-yui.js"></script>
+    <script type="text/javascript" src="js/arial.js"></script>
+    <script type="text/javascript" src="js/cuf_run.js"></script>
+
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderhead" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <%--White Menu And Blue Font Color Of Sub Menu--%>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="Menu_Dsg/styles.css" />
+    <script src="Menu_Dsg/script.js"></script>
+
+    <%--For GridView Format--%>
+    <link href="css/GridViewStyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/GridViewCss1.css" rel="stylesheet" />
+    <link href="css/GridViewCss2.css" rel="stylesheet" />
+
+    <%--For 3D Button--%>
+    <link href="css/3DButtons.css" rel="stylesheet" />
+    <link href="css/GlossyBtn.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="FrmMastHome" runat="server">
+        <div class="main">
+            <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="false" />
+
+            <div class="header">
+                <div class="header_resize">
+                    <div class="logo" style="float: left;">
+                        <h2 style="color: white;">Integrated I.T. Solutions<br />
+                            <small style="color: green">Customised Software Developer</small>
+                        </h2>
+                    </div>
+                    <table style="width: 360px;">
+                        <tr>                                      
+                            <td style="text-align:right; width: 249px">
+                                <asp:Label ID="LblUserName" runat="server" Text="User EMail Id" Style="color: white;"></asp:Label><br />
+                                <asp:Label ID="LblUserDesig" runat="server" Text="User Designation" Style="color:  #73b40e;"></asp:Label>
+                            </td>
+                            <td style="text-align: center;width: 39px;">
+                                <asp:Image ID="ImgUser" runat="server" Height="35px" ImageUrl="~/images/avatar1.jpg" Width="35px" />
+                            </td> 
+                             <td style="text-align: center;width: 9px;">
+                                <asp:Label ID="Label1" runat="server" Text="|" Style="color: #73b40e;" Font-Size="XX-Large"></asp:Label>
+                            </td>  
+                            <td style="text-align: left">
+                                <asp:HyperLink ID="HLLogOut" runat="server" NavigateUrl="~/Default.aspx" Style="color: white;" Font-Size="10pt">Logout</asp:HyperLink>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <%--White Menu And Blue Font Color Of Sub Menu--%>
+                <div id='cssmenu'>
+                    <%--For User Only--%>
+                    <ul runat="server" id="MenuListUser" visible="true">
+                        <li runat="server" id="MnuHome"><a id="A2" href="~/HomePage.aspx" runat="server">Home</a></li>
+
+                        <li runat="server" id="MnuTransaction" class="active has-sub"><a href="#">Transaction</a>
+                            <ul>
+                                <li runat="server" id="MnuDailyEnt" class='has-sub'><a href="#">Daily Entry</a>
+                                    <ul>
+                                        <li runat="server" id="MnuDailyAttandance"><a id="A10" href="~/Transaction/DailyAttandance.aspx" runat="server">Attendace Entry</a></li>
+                                        <li runat="server" id="MnuDRF"><a id="A11" href="~/Transaction/DRFEntry.aspx" runat="server">DRF (Daily Report Form)</a></li>
+                                    </ul>
+                                </li>
+                                <li runat="server" id="MnuWorkAssEnt"><a id="A12" href="~/Transaction/WrokAssign.aspx" runat="server">Work Assign Entry</a></li>
+                                <li runat="server" id="MnuLeaveEnt"><a id="A13" href="~/Transaction/LeaveEntry.aspx" runat="server">Leave Details Entry</a></li>
+                                <li runat="server" id="MnuMthAttSalGen"><a id="A1" href="~/Transaction/MthAttSalGen.aspx" runat="server">Generate Monthly Attandance And Salary</a></li>
+                            </ul>
+                        </li>
+                        <li runat="server" id="MnuAboutsUs"><a id="A22" href="~/Aboutus.aspx" runat="server">About Us</a></li>
+                        <li runat="server" id="MnuContactUs"><a id="A23" href="~/Contactus.aspx" runat="server">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="clr"></div>
+            </div>
+            <div class="content" style="background-color: #008000; height: 1px; vertical-align: top; color: #FFFFFF;">
+                <marquee direction="left" style="margin-top: 0px"><strong> Welcome to Integrated I.T. Solution (I.I.T.S)</strong></marquee>
+            </div>
+            <div class="content" style="-webkit-border-radius: 10px;">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolderPage" runat="server">
+                    <div id="DivMain" runat="server" class="content_resize">
+                        <div class="mainbar">
+                        </div>
+                    </div>
+                </asp:ContentPlaceHolder>
+            </div>
+
+            <div class="fbg">
+                <div class="fbg_resize">
+                    <div class="col c1">
+                        <h2>Image Gallery</h2>
+                        <a href="#">
+                            <img src="images/pix1.jpg" width="66" height="66" alt="" class="ad" /></a>
+                        <a href="#">
+                            <img src="images/pix2.jpg" width="66" height="66" alt="" class="ad" /></a>
+                        <a href="#">
+                            <img src="images/pix3.jpg" width="66" height="66" alt="" class="ad" /></a>
+                        <div class="clr"></div>
+                    </div>
+                    <div class="col c2">
+                        <h2>About</h2>
+                        <img src="images/white.jpg" width="66" height="66" alt="" />
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec libero. Suspendisse bibendum. Cras id urna. Morbi tincidunt, orci ac convallis aliquam, lectus turpis varius.                          
+                            <a href="#">Learn more...</a>
+                        </p>
+                    </div>
+                    <div class="col c3">
+                        <h2>Contact us</h2>
+                        <p>
+                            <strong>Phone:</strong> 12345 54321<br />
+                            <strong>Address:</strong>Surat, Gujarat<br />
+                            <strong>E-mail:</strong> <a href="#">i.i.t.solutions@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="clr"></div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="footer_resize">
+                    <ul class="fmenu">
+                        <li class="active"><a href="~/HomePage.aspx" runat="server">Home</a></li>
+                        <li><a href="~/Aboutus.aspx" runat="server">About Us</a></li>
+                        <li><a href="~/Contactus.aspx" runat="server">Contacts</a></li>
+                    </ul>
+                    <p class="lf">
+                        &copy; Copyright This WebSite. Designed by I.I.T.S.
+                    </p>
+                    <asp:HyperLink ID="HLFB"
+                        ImageUrl="~/images/FB5.jpg"
+                        NavigateUrl="http://facebook.com"
+                        Text="Facebook"
+                        Target="_blank"
+                        runat="server" Height="30px" Width="30px" ImageHeight="30px" ImageWidth="30px" ToolTip="facebook" />
+                    <asp:HyperLink ID="HLT"
+                        ImageUrl="~/images/t2.jpg"
+                        NavigateUrl="https://twitter.com/"
+                        Text="Twitter"
+                        Target="_blank"
+                        runat="server" Height="30px" Width="30px" ImageHeight="30px" ImageWidth="30px" ToolTip="twitter" />
+                    <div class="clr"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

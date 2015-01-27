@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.625" name="HRMSysLinQ">
+  <DataContextMoniker Name="/HRMSysLinQDataContext" />
+  <nestedChildShapes>
+    <classShape Id="0dd2005e-81f0-4cea-b398-244233806171" absoluteBounds="0.5, 0.5, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/Leave_Application" />
+      <nestedChildShapes>
+        <elementListCompartment Id="8a44ccb5-8689-45d4-bef8-87cd20722529" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9fc4b364-0f20-46a3-a651-d4ace38612ce" absoluteBounds="2.625, 0.5, 2, 6.5784326171875">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/Emp_Mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f55e512c-7b77-4593-b4f4-6b5499d0ae60" absoluteBounds="2.6399999999999997, 0.96, 1.9700000000000002, 6.0184326171875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.625 : 2.53925699869792); (2.5 : 2.53925699869792)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/Emp_Mast/Emp_Mast_Leave_Application" />
+      <nodes>
+        <classShapeMoniker Id="9fc4b364-0f20-46a3-a651-d4ace38612ce" />
+        <classShapeMoniker Id="0dd2005e-81f0-4cea-b398-244233806171" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="9329e797-78fa-4c36-8eb8-86811a39751f" absoluteBounds="4.75, 0.5, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/Project_Mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2f9fe709-59ca-4161-bff5-4fb4ef8cd346" absoluteBounds="4.765, 0.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="85f77d7e-87bf-4ca7-b65e-eadf33f665c1" absoluteBounds="6.875, 0.5, 2, 3.5016097005208326">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/Project_Module" />
+      <nestedChildShapes>
+        <elementListCompartment Id="beb5aa10-9bcf-4204-bc7c-68867b6359ff" absoluteBounds="6.89, 0.96, 1.9700000000000002, 2.941609700520833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.75 : 2.25080485026042); (6.875 : 2.25080485026042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/Project_Mast/Project_Mast_Project_Module" />
+      <nodes>
+        <classShapeMoniker Id="9329e797-78fa-4c36-8eb8-86811a39751f" />
+        <classShapeMoniker Id="85f77d7e-87bf-4ca7-b65e-eadf33f665c1" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="d131ae57-7a99-4816-b8e0-67a3a07c0d33" absoluteBounds="4.75, 4.375, 2, 4.6554182942708326">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/Client_Mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="da0c8555-2c1b-4de2-a304-7be68a382796" absoluteBounds="4.7650000000000006, 4.835, 1.9700000000000002, 4.095418294270833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.75 : 4.375); (5.75 : 4.00160970052083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/Client_Mast/Client_Mast_Project_Mast" />
+      <nodes>
+        <classShapeMoniker Id="d131ae57-7a99-4816-b8e0-67a3a07c0d33" />
+        <classShapeMoniker Id="9329e797-78fa-4c36-8eb8-86811a39751f" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="24f312ba-d31c-4f96-aeb8-cbf9cfcb5049" absoluteBounds="0.5, 4.75, 2, 2.5401025390625">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/Dept_Mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1fcb8f9b-1f6d-44cc-80fb-e9445bc7e99c" absoluteBounds="0.51499999999999968, 5.21, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 5.91421630859375); (2.625 : 5.91421630859375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/Dept_Mast/Dept_Mast_Emp_Mast" />
+      <nodes>
+        <classShapeMoniker Id="24f312ba-d31c-4f96-aeb8-cbf9cfcb5049" />
+        <classShapeMoniker Id="9fc4b364-0f20-46a3-a651-d4ace38612ce" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c9d66b54-27dc-46a0-af75-ad69a59b5364" absoluteBounds="2.625, 7.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/Desig_Mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cf407ddb-e1c9-437a-8276-a4d607c0c693" absoluteBounds="2.64, 7.7100000000000009, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.625 : 7.25); (3.625 : 7.0784326171875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/Desig_Mast/Desig_Mast_Emp_Mast" />
+      <nodes>
+        <classShapeMoniker Id="c9d66b54-27dc-46a0-af75-ad69a59b5364" />
+        <classShapeMoniker Id="9fc4b364-0f20-46a3-a651-d4ace38612ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 7.2901025390625); (1.5 : 8.61620198567708); (2.625 : 8.61620198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/Dept_Mast/Dept_Mast_Desig_Mast" />
+      <nodes>
+        <classShapeMoniker Id="24f312ba-d31c-4f96-aeb8-cbf9cfcb5049" />
+        <classShapeMoniker Id="c9d66b54-27dc-46a0-af75-ad69a59b5364" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="831e4417-c725-426f-a434-50dcfb8f1cf2" absoluteBounds="0.5, 10.125, 2, 2.5401025390625">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/Country_Mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="16f6e35c-cbd8-4642-b441-3c6c924d00b0" absoluteBounds="0.51499999999999968, 10.585, 1.9700000000000002, 1.9801025390625" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.5 : 11.3950512695312); (2.5625 : 11.3950512695312); (2.5625 : 7.1721826171875); (3.093748 : 7.1721826171875); (3.093748 : 7.0784326171875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/Country_Mast/Country_Mast_Emp_Mast" />
+      <nodes>
+        <classShapeMoniker Id="831e4417-c725-426f-a434-50dcfb8f1cf2" />
+        <classShapeMoniker Id="9fc4b364-0f20-46a3-a651-d4ace38612ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 10.15625); (5.125 : 10.15625); (5.125 : 9.03041829427083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/Country_Mast/Country_Mast_Client_Mast" />
+      <nodes>
+        <classShapeMoniker Id="831e4417-c725-426f-a434-50dcfb8f1cf2" />
+        <classShapeMoniker Id="d131ae57-7a99-4816-b8e0-67a3a07c0d33" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="adb18663-c977-48fe-881a-e62f2ee126ca" absoluteBounds="2.75, 10.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/State_Mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a36bb54c-889f-4e0a-ad27-b0baa59743d1" absoluteBounds="2.765, 10.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 10.25); (3.75 : 10.0449039713542); (4.6875 : 10.0449039713542); (4.6875 : 3.78921630859375); (4.625 : 3.78921630859375)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/State_Mast/State_Mast_Emp_Mast" />
+      <nodes>
+        <classShapeMoniker Id="adb18663-c977-48fe-881a-e62f2ee126ca" />
+        <classShapeMoniker Id="9fc4b364-0f20-46a3-a651-d4ace38612ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.75 : 11.6162019856771); (5.25 : 11.6162019856771); (5.25 : 9.75); (5.968752 : 9.75); (5.968752 : 9.03041829427083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/State_Mast/State_Mast_Client_Mast" />
+      <nodes>
+        <classShapeMoniker Id="adb18663-c977-48fe-881a-e62f2ee126ca" />
+        <classShapeMoniker Id="d131ae57-7a99-4816-b8e0-67a3a07c0d33" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 12.0925769042969); (2.75 : 12.0925769042969)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/Country_Mast/Country_Mast_State_Mast" />
+      <nodes>
+        <classShapeMoniker Id="831e4417-c725-426f-a434-50dcfb8f1cf2" />
+        <classShapeMoniker Id="adb18663-c977-48fe-881a-e62f2ee126ca" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="112877d1-9e65-4b85-b832-62807d41f174" absoluteBounds="5.5, 10.25, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/City_Mast" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac455c75-8531-4501-b629-2f1f692268a7" absoluteBounds="5.515, 10.71, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.7343755 : 10.25); (6.7343755 : 9.09291829427083); (4.71875 : 9.09291829427083); (4.71875 : 5.46507646289062); (4.625 : 5.46507646289062)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/City_Mast/City_Mast_Emp_Mast" />
+      <nodes>
+        <classShapeMoniker Id="112877d1-9e65-4b85-b832-62807d41f174" />
+        <classShapeMoniker Id="9fc4b364-0f20-46a3-a651-d4ace38612ce" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.35156375 : 10.25); (6.35156375 : 9.03041829427083)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/City_Mast/City_Mast_Client_Mast" />
+      <nodes>
+        <classShapeMoniker Id="112877d1-9e65-4b85-b832-62807d41f174" />
+        <classShapeMoniker Id="d131ae57-7a99-4816-b8e0-67a3a07c0d33" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(1.5 : 12.6651025390625); (1.5 : 13.1098046875); (5.5 : 13.1098046875)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/Country_Mast/Country_Mast_City_Mast" />
+      <nodes>
+        <classShapeMoniker Id="831e4417-c725-426f-a434-50dcfb8f1cf2" />
+        <classShapeMoniker Id="112877d1-9e65-4b85-b832-62807d41f174" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.75 : 10.8706009928385); (5.16666666666667 : 10.8706009928385 : JumpStart); (5.33333333333333 : 10.8706009928385 : JumpEnd); (5.5 : 10.8706009928385)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/HRMSysLinQDataContext/State_Mast/State_Mast_City_Mast" />
+      <nodes>
+        <classShapeMoniker Id="adb18663-c977-48fe-881a-e62f2ee126ca" />
+        <classShapeMoniker Id="112877d1-9e65-4b85-b832-62807d41f174" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="ef6187d8-9d92-493d-9a0f-022094354c25" absoluteBounds="7.25, 4.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/HRMSysLinQDataContext/Student" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b1b1bdec-a364-49ea-ae80-2eb1b6faaa4b" absoluteBounds="7.265, 4.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

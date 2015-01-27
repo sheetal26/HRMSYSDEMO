@@ -1,0 +1,22 @@
+﻿body {
+}
+
+/*  Check out http://www.ServerIntellect.com for all your web hosting needs!
+    Visit http://www.AspNetTutorials.com for more great ASP.NET Tutorials */
+
+
+/* the style for the table headers */
+.gridview th
+{
+    font-size: small;
+    font-weight: bold;
+    color: Navy;
+    border: 1px solid black;
+    padding: 8px;
+}
+/* the style for the normal table cells */
+.gridview td
+{
+    padding: 8px;
+    border: 1px solid black;
+}
